@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"errors"
+	"fmt"
 )
 
 func pov(base, x int) int {
@@ -30,7 +30,7 @@ func strToFloat(str string) (float32, error) {
 			return -1, errors.New("Это не число")
 		}
 		if countDot > 0 {
-			countTens++			
+			countTens++
 		}
 		result *= 10.0
 		result += float32(v - '0')
@@ -59,7 +59,7 @@ func main() {
 	} else {
 		fmt.Printf("%s %T - %d %T\n", base, base, res, res)
 	}
-	
+
 	base2 := "15.478111"
 	res2, err := strToFloat(base2)
 	if err != nil {
